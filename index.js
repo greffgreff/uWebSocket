@@ -1,16 +1,11 @@
 /* Non-SSL is simply App() */
 require("uWebSockets.js")
-  .SSLApp({
-    /* There are more SSL options, cut for brevity */
-    key_file_name: "misc/key.pem",
-    cert_file_name: "misc/cert.pem",
-  })
+  .App()
   .ws("/*", {
     /* There are many common helper features */
     idleTimeout: 32,
     maxBackpressure: 1024,
     maxPayloadLength: 512,
-    compression: DEDICATED_COMPRESSOR_3KB,
 
     /* For brevity we skip the other events (upgrade, open, ping, pong, close) */
     message: (ws, message, isBinary) => {

@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "uWebSockets.js": "uNetworking/uWebSockets.js"
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v20.19.0"
   }
 }
